@@ -6,11 +6,13 @@ import { MeetingListComponent } from './meeting/meeting-list/meeting-list.compon
 
 
 const routes: Routes = [
-  {path:'',redirectTo:'meeting',pathMatch:'full'},
-  {path:'meeting',component:MeetingListComponent},
-  {path:'meeting/add',component:AddMeetingComponent}
-  
-];
+  { path: '', redirectTo: 'meeting', pathMatch: 'full' },
+  {
+    path: 'meeting', component: MeetingListComponent,
+    children: [{
+      path: 'add', component: AddMeetingComponent
+    }]
+  }]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

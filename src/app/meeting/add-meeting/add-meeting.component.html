@@ -1,43 +1,44 @@
-<div class="row my-4">
-    <div class="col-md-12">
+<div class="row my-4 ">
+    <div class="col-md-6">
+
         <h3>Schedule A Meeting</h3>
         <hr />
         <form [formGroup]="meetingForm">
             <div class="mb-3">
-                <label>Full Name:</label><br>
+                <label class="input">Full Name:</label><br>
                 <input type="text" formControlName="fullname" name="fullname" class="form-control" />
-                <span class="errorMsg"
-                    *ngIf="!meetingForm.get('fullname').valid && meetingForm.get('fullname').touched">please enter
+                <span class="errorMsg" *ngIf="fullname && fullname.invalid && fullname.touched">please enter
                     valid Full Name</span>
             </div>
             <div class="mb-3">
-                <label>Meeting Date</label>
+                <label class="input">Meeting Date</label>
                 <input type="date" name="date" formControlName="meetingDate" class="form-control">
-                <span class="errorMsg"
-                    *ngIf="!meetingForm.get('meetingDate').valid && meetingForm.get('meetingDate').touched">please
+                <span class="errorMsg" *ngIf=" meetingDate && meetingDate.invalid && meetingDate.touched">please
                     enter
                     valid Date</span>
             </div>
             <div class="mb-3">
-                <label>Start Time</label>
+                <label class="input">Start Time</label>
                 <input type="Time" name="startTime" formControlName="startTime" class="form-control"
                     placeholder="Start Time">
-                <span class="errorMsg"
-                    *ngIf="!meetingForm.get('startTime').valid && meetingForm.get('startTime').touched">please
+                <span class="errorMsg" *ngIf="startTime && startTime.invalid && startTime.touched">please
                     enter valid StartTime</span>
             </div>
             <div class="mb-3">
-                <label>End Time</label>
+                <label class="input">End Time</label>
                 <input type="Time" class="form-control" formControlName="endTime" name="endTime" placeholder="End Time">
-                <span class="errorMsg"
-                    *ngIf="!meetingForm.get('endTime').valid && meetingForm.get('endTime').touched">please enter
+                <span class="errorMsg" *ngIf="endTime && endTime.invalid && endTime.touched">please enter
                     valid EndTime</span>
             </div>
-            <div class="my-3"><button type="submit" class="btn btn-primary" (click)="createMeeting()"> Save
+            <div class="my-3"><button type="submit" class="btn btn-success" (click)="createMeeting()"> Save
                     meeting</button>
-                <button type="submit" class="btn btn-primary" style="margin-left: 10px;" (click)="cancelSave()">
+                <button type="submit" class="btn btn-danger" style="margin-left: 10px;" (click)="cancelSave()">
                     Cancel</button>
             </div>
         </form>
     </div>
+    <div class="col-md-6">
+        <router-outlet></router-outlet>
+    </div>
+
 </div>

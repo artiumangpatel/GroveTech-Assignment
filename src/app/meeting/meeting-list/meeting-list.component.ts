@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { format } from 'crypto-js';
 
 import { LocalService } from 'src/app/services/local.service';
 
@@ -7,16 +8,17 @@ import { LocalService } from 'src/app/services/local.service';
   templateUrl: './meeting-list.component.html',
   styleUrls: ['./meeting-list.component.css']
 })
-export class MeetingListComponent implements OnInit ,AfterViewInit{
-  constructor(private localService:LocalService) { }
-  meetingList:any[] = [];
+export class MeetingListComponent implements OnInit {
+  constructor(private localService: LocalService) { }
+  meetingList: any[] = [];
   ngOnInit(): void {
     this.meetingList = JSON.parse(this.localService.getMeetings('meetings'));
-    console.log(this.meetingList);
+    // console.log(this.meetingList);
   }
-  ngAfterViewInit():void{
-    
-   
+  updateMeetingList() {
+    this.meetingList = JSON.parse(this.localService.getMeetings('meetings'));
+
+
   }
 
 }

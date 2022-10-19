@@ -1,30 +1,32 @@
-<div class="row my-4">
-    <div class=" col-md-8">
+<div class="row my-4 ">
+    <div class=" col-md-6">
         <h3>Meeting List</h3>
         <div>
-            <a class="btn btn-primary" [routerLink]="['/meeting/add']">Add Meeting</a>
+            <a class="btn btn-success" [routerLink]="['add']">Add Meeting</a>
         </div>
-        <table class="table table-striped">
-            <thead>
-                <tr>
+        <div style="padding-top: 20px;justify-items: center;">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
 
-                    <th>Full Name</th>
-                    <th>Date</th>
-                    <th>Start time</th>
-                    <th>End time</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let meeting of meetingList">
-                    <td>{{meeting.fullname}}</td>
-                    <td>{{meeting.meetingDate| date:'d/M/y'}}</td>
-                    <td>{{meeting.startTime}}</td>
-                    <td>{{meeting.endTime}}</td>
-                </tr>
-            </tbody>
-        </table>
+                        <th>Full Name</th>
+                        <th>Date</th>
+                        <th>Start time</th>
+                        <th>End time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let meeting of meetingList">
+                        <td>{{meeting.fullname}}</td>
+                        <td>{{meeting.meetingDate| date:'d/M/y'}}</td>
+                        <td>{{meeting.startTime}}</td>
+                        <td>{{meeting.endTime}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-6">
         <router-outlet></router-outlet>
     </div>
 </div>

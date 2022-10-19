@@ -1,0 +1,30 @@
+thead tr {
+
+    background-color: cadetblue;
+
+}
+
+td {
+    text-align: center;
+}
+
+tbody tr {
+
+    color: cadetblue;
+}
+
+.image {
+    background-image: url("../../../assets/Images/pngtree.jpg");
+    min-width: 50px;
+    min-height: 70px;
+}
+
+
+a {
+    margin: auto;
+
+}
+
+.table table-striped {
+    color: orange;
+}
