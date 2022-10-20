@@ -10,3 +10,8 @@
 .form-control {
     color: cadetblue;
 }
+
+.col-md-6 {
+    width: 80%;
+    margin: 10px;
+}

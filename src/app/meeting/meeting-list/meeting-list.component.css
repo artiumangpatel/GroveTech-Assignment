@@ -1,5 +1,20 @@
-thead tr {
+.flex-container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    flex-direction: row;
 
+
+}
+
+#form {
+
+    padding: 10px;
+    margin-left: 50px;
+}
+
+thead tr {
+    border-radius: 20px;
     background-color: cadetblue;
 
 }
@@ -13,18 +28,12 @@ tbody tr {
     color: cadetblue;
 }
 
-.image {
+table {
+    text-align: center;
+}
+
+image {
     background-image: url("../../../assets/Images/pngtree.jpg");
     min-width: 50px;
     min-height: 70px;
-}
-
-
-a {
-    margin: auto;
-
-}
-
-.table table-striped {
-    color: orange;
 }
