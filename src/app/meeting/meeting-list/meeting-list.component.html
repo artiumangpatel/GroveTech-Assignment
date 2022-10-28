@@ -1,26 +1,26 @@
 <div class="flex-container">
     <div class="col-md-6">
-        <h3>Meeting List</h3>
+        <h3>{{'MeetingList.meetingList' | translate}}</h3>
         <div>
-            <a class="btn btn-success" [routerLink]="['add']">Add Meeting</a>
+            <a class="btn btn-success" [routerLink]="['add']">{{'MeetingList.addMeeting' | translate}}</a>
         </div>
         <div style="padding-top: 20px;justify-items: center;">
             <table class="table table-striped">
                 <thead>
                     <tr>
 
-                        <th>Full Name</th>
-                        <th>Date</th>
-                        <th>Start time</th>
-                        <th>End time</th>
+                        <th>{{'LoginFormLabels.Fullname' | translate}}</th>
+                        <th>{{'LoginFormLabels.meetingDate' | translate}}</th>
+                        <th>{{'LoginFormLabels.startTime' | translate}}</th>
+                        <th>{{'LoginFormLabels.endTime' | translate}}</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr *ngFor="let meeting of meetingList">
                         <td>{{meeting.fullname}}</td>
                         <td>{{meeting.meetingDate| date:'d/M/y'}}</td>
-                        <td>{{meeting.startTime }}</td>
-                        <td>{{meeting.endTime }}</td>
+                        <td>{{meeting.startTime}}</td>
+                        <td>{{meeting.endTime}}</td>
                     </tr>
                 </tbody>
             </table>

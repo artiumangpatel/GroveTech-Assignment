@@ -13,7 +13,7 @@ export class MeetingListComponent implements OnInit {
   meetingList: any[] = [];
   ngOnInit(): void {
     this.meetingList = JSON.parse(this.localService.getMeetings('meetings'));
-    // console.log(this.meetingList);
+    console.log(this.meetingList);
   }
   updateMeetingList() {
     this.meetingList = JSON.parse(this.localService.getMeetings('meetings'));

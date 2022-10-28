@@ -1,0 +1,18 @@
+{
+    "LoginFormLabels": {
+        "ScheduleMeeting": "बैठक का समय तय करो",
+        "Fullname": "पूरा नाम",
+        "meetingDate": "मिलने की तारीख",
+        "startTime": "समय शुरू",
+        "endTime": "अंत समय",
+        "submit": "स्वीकार करना",
+        "cancel": "रद्द करें"
+    },
+    "MeetingList": {
+        "meetingList": "बैठक सूची",
+        "addMeeting": "बैठक जोड़ें"
+    },
+    "navbar": {
+        "meetingSchedule": "बैठक का समय"
+    }
+}

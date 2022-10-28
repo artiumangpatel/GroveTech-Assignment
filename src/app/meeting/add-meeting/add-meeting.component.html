@@ -1,39 +1,40 @@
 <div class="row">
     <div class="col-md-6">
 
-        <h3>Schedule a Meeting</h3>
+        <h3>{{'LoginFormLabels.ScheduleMeeting' | translate}}</h3>
         <hr />
         <form [formGroup]="meetingForm">
             <div class="mb-3">
-                <label class="input">Full Name:</label><br>
+                <label class="input">{{'LoginFormLabels.Fullname' | translate}}:</label><br>
                 <input type="text" formControlName="fullname" name="fullname" class="form-control" />
                 <span class="errorMsg" *ngIf="fullname && fullname.invalid && fullname.touched">please enter
                     valid Full Name</span>
             </div>
             <div class="mb-3">
-                <label class="input">Meeting Date</label>
+                <label class="input">{{'LoginFormLabels.meetingDate' | translate}}:</label>
                 <input type="date" name="date" formControlName="meetingDate" class="form-control">
                 <span class="errorMsg" *ngIf=" meetingDate && meetingDate.invalid && meetingDate.touched">please
                     enter
                     valid Date</span>
             </div>
             <div class="mb-3">
-                <label class="input">Start Time</label>
+                <label class="input">{{'LoginFormLabels.startTime' | translate}}:</label>
                 <input type="Time" name="startTime" formControlName="startTime" class="form-control"
                     placeholder="Start Time">
                 <span class="errorMsg" *ngIf="startTime && startTime.invalid && startTime.touched">please
                     enter valid StartTime</span>
             </div>
             <div class="mb-3">
-                <label class="input">End Time</label>
+                <label class="input">{{'LoginFormLabels.endTime' | translate}}:</label>
                 <input type="Time" class="form-control" formControlName="endTime" name="endTime" placeholder="End Time">
                 <span class="errorMsg" *ngIf="endTime && endTime.invalid && endTime.touched">please enter
                     valid EndTime</span>
             </div>
-            <div class="my-3"><button type="submit" class="btn btn-success" (click)="createMeeting()"> Save
-                    meeting</button>
+            <div class="my-3"><button type="submit" class="btn btn-success"
+                    (click)="createMeeting()">{{'LoginFormLabels.submit' | translate}}</button>
                 <button type="submit" class="btn btn-danger" style="margin-left: 10px;" (click)="cancelSave()">
-                    Cancel</button>
+                    {{'LoginFormLabels.cancel' | translate}}
+                </button>
             </div>
         </form>
     </div>

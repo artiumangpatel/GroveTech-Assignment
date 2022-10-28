@@ -7,6 +7,7 @@ import { LocalService } from 'src/app/services/local.service';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MeetingListComponent } from '../meeting-list/meeting-list.component';
 import { from } from 'rxjs';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-add-meeting',
@@ -14,6 +15,20 @@ import { from } from 'rxjs';
   styleUrls: ['./add-meeting.component.css']
 })
 export class AddMeetingComponent implements OnInit {
+
+
+  // Fullname: string = "";
+  // meetingDate: String = "";
+  // startTime: string = "";
+  // endTime: string = "";
+
+  LoginFormLabels = {
+    Fullname: "Fullname",
+    meetingDate: "meetingDate",
+    startTime: "startTime",
+    endTime: "endTime",
+    submit: "Submit"
+  }
   // fullname:any="";
   // meetingDate:Date = new Date();
   // startTime:Date =new Date();
@@ -22,7 +37,7 @@ export class AddMeetingComponent implements OnInit {
   // meeting: string|any[]|null|undefined;
 
 
-  constructor(private localservice: LocalService, private route: Router, private formbuilder: FormBuilder, private meetingList: MeetingListComponent) {
+  constructor(private localservice: LocalService, private route: Router, private formbuilder: FormBuilder, private meetingList: MeetingListComponent, public translate: TranslateService) {
 
   }
   // 
@@ -69,7 +84,7 @@ export class AddMeetingComponent implements OnInit {
   get startTime() {
     return this.meetingForm.get('startTime');
   }
-  get endTime() {
+  get endTime(): any {
     return this.meetingForm.get('endTime');
   }
 

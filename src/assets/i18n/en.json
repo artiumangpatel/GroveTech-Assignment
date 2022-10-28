@@ -1,0 +1,18 @@
+{
+    "LoginFormLabels": {
+        "ScheduleMeeting": "Schedule A Meeting",
+        "Fullname": "Fullname",
+        "meetingDate": "meetingDate",
+        "startTime": "startTime",
+        "endTime": "endTime",
+        "submit": "submit",
+        "cancel": "cancel"
+    },
+    "MeetingList": {
+        "meetingList": "Meeting List",
+        "addMeeting": "Add Meeting"
+    },
+    "navbar": {
+        "meetingSchedule": "Meeting Schedule"
+    }
+}
